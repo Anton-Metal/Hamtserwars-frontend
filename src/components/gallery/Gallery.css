@@ -1,0 +1,62 @@
+.gallery {
+	display: grid;
+	justify-items: stretch;
+
+	grid-template-columns: repeat(4, calc(25% - (3em / 4)));
+	column-gap: 1em;
+	grid-template-rows: auto; 
+	row-gap: 1em;
+}
+
+.gallery-item {
+
+	background-color: #222222;
+	padding: 1em;
+	padding-top: 0.25em;
+	
+	border-radius: 1em;
+	grid-area: auto;
+}
+
+.gallery-item img {
+	border-radius: 15px;
+	background-position: center;
+	height: 10em;
+	width: 100%;
+}
+
+
+:root {
+	--error-color: #ff1500;
+	--valid-color: #0a7700;
+}
+
+.gallery-form {
+	font-size: 1.2em;
+}
+
+.gallery-form > div {
+	margin-top: 1em;
+	margin-bottom: 1.5em;
+}
+
+.gallery-form label {
+	font-weight: bold;
+	font-size: 0.9em;
+}
+.gallery-form input {
+	font-size: 1.1em;
+	border-radius: 0.3em;
+	border-width: 3px;
+	padding-left: 0.5em;
+}
+.gallery-form .message {
+	position: absolute;
+	color: var(--error-color);
+}
+.gallery-form .error {
+	border-color: var(--error-color);
+}
+.gallery-form .valid {
+	border-color: var(--valid-color);
+}
