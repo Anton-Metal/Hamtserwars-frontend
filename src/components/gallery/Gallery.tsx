@@ -12,7 +12,7 @@ import './Gallery.css'
 
 
 interface Hamster {
-
+	
 	id:			string,
 	name: 		string,
 	age:		number,	
@@ -69,11 +69,10 @@ const Gallery = () =>  {
 			<h2>	{hamster.name} </h2>
 			<p>	Age: {hamster.age} </p>
 			<img src={ './img/' + hamster.imgName } alt="bild på hamster" />
-			<ShowMore />		
+			<ShowMore wins={hamster.wins} defeats={hamster.defeats} games={hamster.games}/> 		
 			<br />	
 			<button onClick={() => deleteHamster(hamster.id)}>Remove</button>
-
-			
+		
 
 			</div>
 

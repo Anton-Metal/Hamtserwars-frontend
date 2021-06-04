@@ -1,3 +1,12 @@
+
+
+This is an eximination for effective-frontend
+
+My goal is to get G
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

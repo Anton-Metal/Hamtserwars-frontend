@@ -51,7 +51,7 @@
 	padding-left: 0.5em;
 }
 .gallery-form .message {
-	position: absolute;
+	
 	color: var(--error-color);
 }
 .gallery-form .error {

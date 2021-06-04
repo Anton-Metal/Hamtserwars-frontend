@@ -7,9 +7,6 @@ const InputGallery = () => {
 	const [inputFavFood, setInputFavFood] = useState('')
 	const [inputLoves, setInputLoves] = useState('')
 	const [inputImgName, setInputImgName] = useState('')
-	const [inputWins, setInputWins] = useState(0)
-	const [inputDefeats, setInputDefeats] = useState(0)
-	const [inputGames, setInputGames] = useState(0)
 
 
 
@@ -148,6 +145,11 @@ const InputGallery = () => {
 			'games': 0
 
 		}
+		setInputName ('')
+		setInputAge ('')
+		setInputFavFood ('')
+		setInputLoves ('')
+		setInputImgName ('')
 
 		// för att skickar den nya hamstern till API:t som skickar hamstern vidare till databasen(firestore) 
 		await fetch(`/hamsters`, { 
@@ -155,11 +157,12 @@ const InputGallery = () => {
 			headers: {
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify(hamsterInputData) 
-
+			body: JSON.stringify(hamsterInputData) 		
+			
 			
 		
 		})
+		
 	}
 	
 	return (
