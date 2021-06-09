@@ -146,14 +146,16 @@ router.put('/:id', async (req, res) => {
         // Skickar över data från body till hamster
 		// "Object.Keys()" Gör att man kan hantera ett objekt som en array (i loopen) 
 		// så "Object.Keys()" basically gör objektet till en aray medans funktionen körs 
-        Object.keys(body).forEach(bodyKey => { 
+  /*      Object.keys(body).forEach(bodyKey => { 
             if (hamster[bodyKey]) { // "hamster[bodyKey]" letar efter en nyckel i "hamster" som matchar nyckeln i body
                 hamster[bodyKey] = body[bodyKey] // Den del av hamster som matchar med body, ska overridas av body:n
             }
         });
+	*/
  
         // Allt gick bra (200). Hamstern uppdateras
-        await docRef.set(hamster, { merge: true })
+		console.log('putting hamster', hamster, body)
+        await docRef.set(body, { merge: true })
         res.sendStatus(200)
  
     } catch (error) {

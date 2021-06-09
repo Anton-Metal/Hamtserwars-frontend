@@ -76,11 +76,11 @@ const Battle = () => {
 		if (!showResult) {
 
 			// Registrerar matchresultatet
-			setHamster1({...hamster2, wins: hamster2.wins + 1, games: hamster2.games + 1})
-			setHamster2({...hamster1, defeats: hamster1.defeats + 1, games: hamster1.games + 1})
+			setHamster2({...hamster2, wins: hamster2.wins + 1, games: hamster2.games + 1})
+			setHamster1({...hamster1, defeats: hamster1.defeats + 1, games: hamster1.games + 1})
 			const winnerChanges = {wins: hamster2.wins + 1, games: hamster2.games + 1}
 			
-			await fetch(`/hamsters/${hamster1.id}`, 
+			await fetch(`/hamsters/${hamster2.id}`, 
 			{ method: 'PUT', 
 				headers: {
 					'Content-Type': 'application/json'
@@ -89,7 +89,7 @@ const Battle = () => {
 			})
 
 			const defeatsChanges = {defeats: hamster2.defeats + 1, games: hamster2.games + 1}
-			await fetch(`/hamsters/${hamster2.id}`, 
+			await fetch(`/hamsters/${hamster1.id}`, 
 			{ method: 'PUT',
 				headers: {
 					'Content-Type': 'application/json'
