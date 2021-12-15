@@ -4,7 +4,7 @@ This is an examination for effective-frontend
 
 The assigemt is to randomize 2 hamsters and pick the cutes of the two in "battle". 
 The information will be saved to the backend. 
-In "galley" you can see all the information about every hamster, like loss, wins. 
+In "galley" you can see all the information about every hamster, like wins and defeats. 
 You can also add a hamster
 
 
